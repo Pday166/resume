@@ -29,6 +29,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   box-sizing: border-box;
+  background: #333;
+    color: hsl(200, 100%, 90%);
 }
 
 h1 {
@@ -36,23 +38,27 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.btn {
+  background: hsl(200, 100%, 50%, 0.1);
+  border: 1px solid hsl(200, 100%, 50%);
+  color: hsl(200, 100%, 50%);
+  width: 6em;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
   cursor: pointer;
-  transition: border-color 0.25s;
+  outline: none;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.btn:hover,
+.btn:focus-visible {
+  background: hsl(200, 100%, 50%, 0.2);
 }
 
 @media (prefers-color-scheme: light) {
@@ -63,7 +69,18 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+  
+}
+.input {
+  outline: none;
+  border: 1px solid hsl(200, 100%, 40%);
+  background: hsl(200, 100%, 30%);
+  width: 70%;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: hsl(200, 100%, 90%);
+}
+
+.input:focus {
+  border: 1px solid hsl(200, 100%, 70%);
 }
