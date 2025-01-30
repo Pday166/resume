@@ -1,0 +1,37 @@
+#root {
+  max-width: 1280px;
+  /* margin: 0 auto; */
+  
+  text-align: center;
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.container {
+  display: flex;
+  
+  width: 100vw;
+  
+ 
+  margin:0
+}
+.forms {
+  width: 30%;
+  height: 100vh;
+  background-color: rebeccapurple;
+  border: 1px solid red;
+}
+
+.cv {
+  width: 70%;
+  height: 100vh;
+  background-color: rgba(100, 100, 260, .2);
+
+}
