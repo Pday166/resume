@@ -5,17 +5,21 @@ import { PersonalForm } from './components/Person'
 
 function App() {
   const initPersonal = {
-    name: 'Thom',
-    phone: '696'
+    name: {label: "Name", value: "", type: "text"},
+    phone: {label: "Phone", value: "", type: "tel"},
+    email: {label: "Email", value: "", type: "email"}
+
 }
   const [personal, setPersonal] = useState(initPersonal)
   
   function handlePersonal(e) {
-    e.preventDefault()
-    const { name, value} = e.target
+    const { name, value } = e.target;
     setPersonal({
       ...personal,
-      [name]: value
+      [name]: {
+        ...personal[name], // preserve other fields like label and type
+        value // update the value of the specific field
+      }
     });
   }
   return (

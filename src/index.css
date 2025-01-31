@@ -84,3 +84,30 @@ h1 {
 .input:focus {
   border: 1px solid hsl(200, 100%, 70%);
 }
+
+.personal-form-container {
+  /* margin-bottom: 20px; */
+}
+
+.collapse-btn {
+  cursor: pointer;
+  width:2em;
+  height: 2em;
+}
+
+.collapse-btn:hover {
+  
+ 
+}
+
+.form-section {
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  max-height: 1000px; /* Default max-height (not collapsed) */
+  opacity: 1; /* Fully visible when expanded */
+  overflow: hidden; /* Hide overflow when collapsed */
+}
+
+.form-section.collapsed {
+  max-height: 0; /* Collapse to height 0 */
+  opacity: 0; /* Make it fully transparent when collapsed */
+}
