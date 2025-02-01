@@ -38,6 +38,13 @@ h1 {
   line-height: 1.1;
 }
 
+h3 {
+  margin:0;
+}
+.hr {
+  width:90%;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -85,8 +92,11 @@ h1 {
   border: 1px solid hsl(200, 100%, 70%);
 }
 
-.personal-form-container {
-  /* margin-bottom: 20px; */
+.form-container {
+  display: flex;
+ justify-content: space-between;
+  
+  padding: 2em;
 }
 
 .collapse-btn {
@@ -96,7 +106,7 @@ h1 {
 }
 
 .collapse-btn:hover {
-  
+  opacity: 50%;
  
 }
 

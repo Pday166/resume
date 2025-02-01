@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input } from "./Input"
-import { IoMdArrowDropdown } from "react-icons/io";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+
 
 
 
@@ -10,9 +11,12 @@ function PersonalForm({ personal, handleChange }) {
         setIsCollapsed(prevState => !prevState)
     }
     return (
-        <div className="personal-form-container">
-            <h3>Personal Information</h3>
-           <IoMdArrowDropdown className="collapse-btn" onClick={toggleCollapse}/>
+        <>
+         <div className="form-container">
+         <h3>Personal</h3>
+           {isCollapsed ? <IoMdArrowDropdown className="collapse-btn" onClick={toggleCollapse}/> : <IoMdArrowDropup className="collapse-btn" onClick={toggleCollapse}/>
+            }
+           </div> 
             
             
             <div className={`form-section ${isCollapsed ? 'collapsed' : ''}`}>
@@ -30,8 +34,9 @@ function PersonalForm({ personal, handleChange }) {
         ))}
         <button type="button" className="btn">Submit</button>
       </form>
+      
       </div>
-      </div>
+      </>
     );
   }
 
