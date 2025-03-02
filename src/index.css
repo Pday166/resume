@@ -111,7 +111,7 @@ h3 {
 }
 
 .form-section {
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  transition: max-height 0.6s ease-out, opacity 0.6s ease-out;
   max-height: 1000px; /* Default max-height (not collapsed) */
   opacity: 1; /* Fully visible when expanded */
   overflow: hidden; /* Hide overflow when collapsed */
@@ -120,4 +120,8 @@ h3 {
 .form-section.collapsed {
   max-height: 0; /* Collapse to height 0 */
   opacity: 0; /* Make it fully transparent when collapsed */
+}
+
+.experience:hover {
+  cursor: pointer
 }

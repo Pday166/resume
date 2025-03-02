@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Input } from "./Input"
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
-function ExperienceForm({experience, handleChange, onSubmit}){
-    const[isCollapsed, setIsCollapsed] = useState(false)
-    const toggleCollapse = () => {
-        setIsCollapsed(prevState => !prevState)
-    }
+function ExperienceForm({experience, handleChange, onSubmit, toggleCollapse, isCollapsed}){
+    // const[isCollapsed, setIsCollapsed] = useState(false)
+    // const toggleCollapse = () => {
+    //     setIsCollapsed(prevState => !prevState)
+    // }
     return (
 <>
 <div className="form-container">
@@ -38,15 +38,18 @@ function ExperienceForm({experience, handleChange, onSubmit}){
     )
 }
 
-function Experience({expArr}){
+function Experience({experience, expArr, editExp}){
     return (
 <>
 <div className="experience">
 <h2>Professional Experience</h2>
-{expArr.map((experience, index) => (
-<div key={index}>
+{/* {experience.position.value} {experience.company.value} {experience.description.value} {experience.location.value} {experience.start.value}{experience.end.value}  most likely not needed...the expArr is what gets printed to the screen */} 
 
-{experience.position.value} {experience.company.value} {experience.description.value} {experience.location.value} {experience.start.value}{experience.end.value}
+{expArr.map((exp, index) => (
+<div key={index} className="experience" onClick={() => editExp(index)}>
+
+{exp.position.value} {exp.company.value} {exp.description.value} {exp.location.value} {exp.start.value}{exp.end.value}
+<button className="btn" onClick={() => editExp(index)}>edit</button>
 </div>
 ))}
 </div>
